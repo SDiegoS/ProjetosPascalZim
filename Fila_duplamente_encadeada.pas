@@ -2,7 +2,7 @@ program Diego;
 uses crt;
 
 type tipo_inf = string;
-		 tipo_inf2 = real;
+     tipo_inf2 = real;
 
     ptuf = ^municipios;
     municipios = record {lista de municípios;}
