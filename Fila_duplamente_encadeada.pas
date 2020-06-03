@@ -1,11 +1,11 @@
-program Diego_Diogo;
+program Diego;
 uses crt;
 
 type tipo_inf = string;
 		 tipo_inf2 = real;
 
     ptuf = ^municipios;
-    municipios = record {lista de municÌpios;}
+    municipios = record {lista de munic√≠pios;}
      	municipio: tipo_inf;
      	populacao,area:tipo_inf2;
      	proxuf,antuf:ptuf;
@@ -66,7 +66,7 @@ Begin
         while (auxl^.prox <> nil) and (auxl^.sigla_uf<> inf) do
         	auxl:=auxl^.prox;
         if auxl^.sigla_uf=inf then 
-        	writeln('Estado J· Cadastrado')
+        	writeln('Estado J√° Cadastrado')
         else   
         begin
 					if listai=nil then begin
@@ -108,7 +108,7 @@ Begin
   readkey;
 End;
 
-//Procedimento para Incluir MunicÌpio
+//Procedimento para Incluir Munic√≠pio
 Procedure Inclui_municipio (Var listai:ptnodo);
 var aux_uf,aux2,aux3,ant,aux:ptuf;
     auxl,auxl2: ptnodo;
@@ -124,7 +124,7 @@ begin
   else
      Begin
         if listai = nil then 
-          writeln('Lista de Estado est· vazia')
+          writeln('Lista de Estado est√° vazia')
         else begin
   	   		write('Digite a Sigla do Estado: ');
    				readln (inf);
@@ -134,18 +134,18 @@ begin
         	while (auxl^.prox <> nil) and (auxl^.sigla_uf<> inf) do
              auxl:=auxl^.prox;
           if auxl^.sigla_uf<>inf then 
-            writeln('Estado n„o cadastrado')
+            writeln('Estado n√£o cadastrado')
           else begin
          		write('Digite o Municipio: ');
     				readln (inf2);
-    				write('Digite a PopulaÁ„o: ');
+    				write('Digite a Popula√ß√£o: ');
     				readln (inf3);
-    				write('Digite a ¡rea: ');
+    				write('Digite a √Årea: ');
     				readln (inf4);
     				while (aux^.proxuf <> nil) and (aux^.municipio <> inf2) do
              	aux:=aux^.proxuf;
           	if aux^.municipio=inf2 then
-          		writeln('MunicÌpio J· Cadastrado')
+          		writeln('Munic√≠pio J√° Cadastrado')
 						else
 						begin		
         	    aux2:=auxl2^.muni;
@@ -193,7 +193,7 @@ begin
   readkey;
 end;
 
-//Procedimento para Escrever a Lista de Estado e MunicÌpio
+//Procedimento para Escrever a Lista de Estado e Munic√≠pio
 procedure escreve_lista (var listai:ptnodo);
 var aux:ptnodo;
 		auxl,auxl2:ptuf;
@@ -203,7 +203,7 @@ begin
 	aux:=listai;
 	if aux= nil then
 		begin
-			writeln ('Lista de Estado e Municipio est· vazia.');
+			writeln ('Lista de Estado e Municipio est√° vazia.');
 		end
 	else
 	while aux <> nil do
@@ -216,16 +216,16 @@ begin
 			auxl:=aux^.muni;
   	  if auxl=nil then
   	  	begin	
-					writeln ('Lista de Municipio est· vazia');
+					writeln ('Lista de Municipio est√° vazia');
 					writeln ('');
 				end	
 			else begin
 				while auxl <> nil do
 	 			begin
 	 			  writeln('');
-					writeln ('MunicÌpio:',auxl^.municipio,'.');
-					writeln ('PopulaÁ„o:',auxl^.populacao:0:0,'.');
-					writeln ('¡rea:',auxl^.area:0:0,'.');
+					writeln ('Munic√≠pio:',auxl^.municipio,'.');
+					writeln ('Popula√ß√£o:',auxl^.populacao:0:0,'.');
+					writeln ('√Årea:',auxl^.area:0:0,'.');
 					writeln('');
 					auxl:=auxl^.proxuf;
 				end;		
@@ -235,16 +235,16 @@ begin
 			writeln('Lista Final:');
   	  if auxl2=nil then
   	  	begin	
-					writeln ('Lista de Municipio est· vazia');
+					writeln ('Lista de Municipio est√° vazia');
 					writeln ('');
 				end	
 			else begin
 				while auxl2 <> nil do
 	 			begin
 	 			  writeln('');
-					writeln ('MunicÌpio:',auxl2^.municipio,'.');
-					writeln ('PopulaÁ„o:',auxl2^.populacao:0:0,'.');
-					writeln ('¡rea:',auxl2^.area:0:0,'.');
+					writeln ('Munic√≠pio:',auxl2^.municipio,'.');
+					writeln ('Popula√ß√£o:',auxl2^.populacao:0:0,'.');
+					writeln ('√Årea:',auxl2^.area:0:0,'.');
 					writeln('');
 					auxl2:=auxl2^.antuf;
 				end;		
@@ -267,7 +267,7 @@ begin
 	aux2:=listaf;
 	if aux= nil then
 		begin
-			writeln ('Lista de Estado e Municipio est· vazia.');
+			writeln ('Lista de Estado e Municipio est√° vazia.');
 		end
 	else
 	writeln ('<---------------------------------------------->');
@@ -295,7 +295,7 @@ begin
 	readkey;	
 end;
 
-//Procedimento para Escrever o Estado e a Lista de MunicÌpio
+//Procedimento para Escrever o Estado e a Lista de Munic√≠pio
 procedure escreve (var listai:ptnodo);
 var aux:ptnodo;
 		auxl,auxl2:ptuf;
@@ -306,19 +306,19 @@ begin
 	aux:=listai;
 	if aux= nil then
 		begin
-			writeln ('Lista de Estado e Municipio est· vazia.');
+			writeln ('Lista de Estado e Municipio est√° vazia.');
 		end
 	else
 		Begin
       if listai = nil then 
-        writeln('Lista de Estado est· vazia')
+        writeln('Lista de Estado est√° vazia')
       else begin
   	  	write('Digite a Sigla do Estado: ');
    			readln (inf);
        	while (aux^.prox <> nil) and (aux^.sigla_uf<> inf) do
            aux:=aux^.prox;
         if aux^.sigla_uf<>inf then 
-          writeln('Estado n„o cadastrado')
+          writeln('Estado n√£o cadastrado')
         else begin
 					writeln ('<---------------------------------------------->');
 					writeln ('');
@@ -328,16 +328,16 @@ begin
 					auxl:=aux^.muni;
   			  if auxl=nil then
   	  			begin	
-							writeln ('Lista de Municipio est· vazia');
+							writeln ('Lista de Municipio est√° vazia');
 							writeln ('');
 						end	
 					else begin
 						while auxl <> nil do
 	 						begin
 	 						  writeln('');
-								writeln ('MunicÌpio:',auxl^.municipio,'.');
-								writeln ('PopulaÁ„o:',auxl^.populacao:0:0,'.');
-								writeln ('¡rea:',auxl^.area:0:0,'.');
+								writeln ('Munic√≠pio:',auxl^.municipio,'.');
+								writeln ('Popula√ß√£o:',auxl^.populacao:0:0,'.');
+								writeln ('√Årea:',auxl^.area:0:0,'.');
 								writeln('');
 								auxl:=auxl^.proxuf;
 							end;		
@@ -347,16 +347,16 @@ begin
 					writeln('Lista Final:');
   			  if auxl2=nil then
   	  			begin	
-							writeln ('Lista de Municipio est· vazia');
+							writeln ('Lista de Municipio est√° vazia');
 							writeln ()
 						end	
 					else begin
 						while auxl2 <> nil do
 	 						begin
 	 						  writeln('');
-								writeln ('MunicÌpio:',auxl2^.municipio,'.');
-								writeln ('PopulaÁ„o:',auxl2^.populacao:0:0,'.');
-								writeln ('¡rea:',auxl2^.area:0:0,'.');
+								writeln ('Munic√≠pio:',auxl2^.municipio,'.');
+								writeln ('Popula√ß√£o:',auxl2^.populacao:0:0,'.');
+								writeln ('√Årea:',auxl2^.area:0:0,'.');
 								writeln('');
 								auxl2:=auxl2^.antuf;
 							end;		
@@ -393,7 +393,7 @@ begin
       if aux^.sigla_uf<>inf then
       	begin
 					writeln ('');	
-      		writeln('N„o cadastrado')
+      		writeln('N√£o cadastrado')
       	end	
       else	
       	begin
@@ -429,7 +429,7 @@ begin
 	readkey;	           
 end;
 	
-//Procedimento para Remover MunicÌpio						
+//Procedimento para Remover Munic√≠pio						
 procedure remove_municipio (var listai:ptnodo);
 var aux:ptnodo;
 		auxl,auxm,aux2,auxp:ptuf;
@@ -448,15 +448,15 @@ begin
       while (aux^.prox <> nil) and (aux^.sigla_uf<> inf) do
       	aux:=aux^.prox;
       	if (aux^.sigla_uf<>inf) then 
-        	writeln('Estado n„o cadastrado')
+        	writeln('Estado n√£o cadastrado')
         else
 	      	begin
 	      	  aux2:=aux^.muni;
-						writeln('Digite o nome do MunicÌpio:'); 
+						writeln('Digite o nome do Munic√≠pio:'); 
 						readln(inf2);
 						auxl:=aux^.muni;
   	  			if auxl=nil then
-							writeln ('Lista de MunicÌpio est· vazia')
+							writeln ('Lista de Munic√≠pio est√° vazia')
 						else 
 							begin                                                    
 								while (auxl^.proxuf<>nil) and (auxl^.municipio<>inf2) do
@@ -466,7 +466,7 @@ begin
   				    			auxp:=auxl^.proxuf;
   				    		end;	
   				    	if auxl^.municipio<>inf2 then
-									writeln	('MunicÌpio n„o Cadastrado.')
+									writeln	('Munic√≠pio n√£o Cadastrado.')
 								else
 									begin
 										if aux2^.municipio=inf2 then //Exclui Inicio
@@ -476,7 +476,7 @@ begin
 														aux^.muni:=nil;
 														aux^.munf:=nil;
 														writeln ('');
-														writeln('MunicÌpio Removido');
+														writeln('Munic√≠pio Removido');
 													end	
 												else 
 													begin
@@ -485,7 +485,7 @@ begin
 														aux^.muni:=auxp;
 														dispose(auxl);
 														writeln ('');
-        										writeln('MunicÌpio Removido');
+        										writeln('Munic√≠pio Removido');
         									end;	
         							end
 										else if auxl^.proxuf = nil then //Exclui Fim
@@ -494,7 +494,7 @@ begin
 												aux^.munf:=auxm;
 												dispose(auxl);
 												writeln ('');
-												writeln('MunicÌpio Removido');
+												writeln('Munic√≠pio Removido');
 											end
 										else
 											begin  //Exclui Meio
@@ -502,7 +502,7 @@ begin
 					  						auxp^.antuf:=auxm;
 												dispose(auxl);
 												writeln ('');
-												writeln('MunicÌpio Removido');																												    
+												writeln('Munic√≠pio Removido');																												    
 					  					end;
 									end;					
         			end;
@@ -521,7 +521,7 @@ begin
   writeln('|-----------------------------|');
   writeln('|(1) Cadastrar Estado         |');
   writeln('|-----------------------------|');
-  writeln('|(2) Cadastrar MunicÌpio      | ');
+  writeln('|(2) Cadastrar Munic√≠pio      | ');
   writeln('|-----------------------------|');
   writeln('|(3) Listar Total             |');
   writeln('|-----------------------------|');
@@ -531,7 +531,7 @@ begin
   writeln('|-----------------------------|');
   writeln('|(6) Remover Estado           |');
   writeln('|-----------------------------|');
-  writeln('|(7) Remover MunicÌpio        |');
+  writeln('|(7) Remover Munic√≠pio        |');
   writeln('|-----------------------------|');
 	writeln('|(8) Sair                     |');
 	writeln('|-----------------------------|');
